@@ -27,6 +27,10 @@ describe('Inputs and submit button', () => {
       .type("My new author")
       .should('have.value', "My new author")
   })
+
+  it('the submit button is not disable any more', () => {
+
+  })
 })
 
 describe('Adding a new quote', () => {
