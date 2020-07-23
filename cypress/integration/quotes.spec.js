@@ -69,6 +69,10 @@ describe('Adding and deleting a new quote', () => {
 })
 
 describe('Editing a quote', () => {
+  beforeEach(() => {
+    // cleanup
+  })
+
   it('can navigate to the site', () => {
     cy.visit('http://localhost:1234')
   })
