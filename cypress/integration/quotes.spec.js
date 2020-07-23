@@ -8,7 +8,9 @@ describe('Inputs and submit button', () => {
   })
 
   it('submit button is disabled', () => {
-    // this is another test
+    // grab the element
+    // check that it's actually disabled
+    cy.get('#submitBtn').should('be.disabled')
   })
 })
 
