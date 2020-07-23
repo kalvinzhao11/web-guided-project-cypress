@@ -55,6 +55,7 @@ describe('Adding and deleting a new quote', () => {
     // assert that a quote with the given text and author are in the DOM
     cy.get('input[name="text"]').type('Have Fun!')
     cy.get('input[name="author"]').type('Gabe')
+    // cy.pause()
     cy.get('#submitBtn').click()
     cy.get(".container").contains('Have Fun!')
   })
