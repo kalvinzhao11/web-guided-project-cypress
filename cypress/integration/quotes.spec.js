@@ -47,10 +47,15 @@ describe('Inputs and submit button', () => {
 describe('Adding a new quote', () => {
   it('can navigate to the site', () => {
     // repeat minus the check
+    cy.visit('http://localhost:1234')
   })
 
   it('can submit a quote', () => {
     // filling out the form and submit it
     // assert that a quote with the given text and author are in the DOM
+    cy.get('input[name="text"]').type('Have Fun!')
+    cy.get('input[name="author"]').type('Gabe')
+    cy.get('#submitBtn').click()
+    cy.get(".container").contains('Have Fun!')
   })
 })
