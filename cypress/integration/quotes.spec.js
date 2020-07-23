@@ -69,9 +69,26 @@ describe('Adding and deleting a new quote', () => {
 })
 
 describe('Editing a quote', () => {
-  // navigate
-  // add a new one
-  // edit the new one, checking the author and/or text changes
-  // edit it back
-  // delete
+  it('can navigate to the site', () => {
+    cy.visit('http://localhost:1234')
+  })
+
+  it('can submit a quote', () => {
+    cy.get('input[name="text"]').type('Have')
+    cy.get('input[name="author"]').type('Gabriel')
+    cy.get('#submitBtn').click()
+  })
+
+  it('click the edit button and submit changes', () => {
+    cy.contains('Have (Gabriel)').siblings('button:nth-of-type(1)').click()
+    cy.get('input[name="text"]').type(' fun!')
+    cy.get('input[name="author"]').type(' Cabrejas')
+    cy.get('#submitBtn').click()
+    cy.contains('Have fun! (Gabriel Cabrejas)')
+  })
+
+  it('can delete the edited', () => {
+    cy.contains('Have fun! (Gabriel Cabrejas)').siblings('button:nth-of-type(2)').click()
+    cy.contains('Have fun! (Gabriel Cabrejas)').should('not.exist')
+  })
 })
