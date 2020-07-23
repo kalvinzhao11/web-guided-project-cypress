@@ -28,8 +28,19 @@ describe('Inputs and submit button', () => {
       .should('have.value', "My new author")
   })
 
-  it('the submit button is not disable any more', () => {
+  it('the submit button is not disabled any more', () => {
+    cy.get('#submitBtn').should('not.be.disabled')
+  })
 
+  it('can cancel the new quote', () => {
+    // grab the submit button
+    // click the submit button
+    // assert the inputs are back to blank and the button back to disabled
+    cy.get('#submitBtn').click()
+
+    cy.get('input[name="text"]').should('have.value', '')    // assertion 1
+    cy.get('input[name="author"]').should('have.value', '')  // assertion 2
+    cy.get('#submitBtn').should('be.disabled')               // assertion 3
   })
 })
 
