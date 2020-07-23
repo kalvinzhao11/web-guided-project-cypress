@@ -62,5 +62,6 @@ describe('Adding and deleting a new quote', () => {
   it('can delete the newly added quote', () => {
     // find the delete button of the quote, click it,
     // assert that the contents are not in there any more
+    cy.contains('Have Fun!').siblings('button:nth-of-type(2)').click()
   })
 })
