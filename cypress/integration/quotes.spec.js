@@ -44,7 +44,7 @@ describe('Inputs and submit button', () => {
   })
 })
 
-describe('Adding a new quote', () => {
+describe('Adding and deleting a new quote', () => {
   it('can navigate to the site', () => {
     // repeat minus the check
     cy.visit('http://localhost:1234')
@@ -57,5 +57,10 @@ describe('Adding a new quote', () => {
     cy.get('input[name="author"]').type('Gabe')
     cy.get('#submitBtn').click()
     cy.get(".container").contains('Have Fun!')
+  })
+
+  it('can delete the newly added quote', () => {
+    // find the delete button of the quote, click it,
+    // assert that the contents are not in there any more
   })
 })
