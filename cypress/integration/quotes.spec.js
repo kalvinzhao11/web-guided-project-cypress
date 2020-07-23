@@ -19,6 +19,7 @@ describe('Inputs and submit button', () => {
     // assert that the value of the input is the thing we typed
     cy.get('input[name="text"]')
       .type('Have Fun!')
+      .should('have.value', 'Have Fun!')
   })
 })
 
