@@ -21,6 +21,12 @@ describe('Inputs and submit button', () => {
       .type('Have Fun!')
       .should('have.value', 'Have Fun!')
   })
+
+  it("Can type in an author", () => {
+    cy.get('input[name="author"]')
+      .type("My new author")
+      .should('have.value', "My new author")
+  })
 })
 
 describe('Adding a new quote', () => {
