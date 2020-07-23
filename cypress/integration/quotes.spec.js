@@ -66,3 +66,11 @@ describe('Adding and deleting a new quote', () => {
     cy.contains('Have Fun! (Gabe)').should('not.exist')
   })
 })
+
+describe('Editing a quote', () => {
+  // navigate
+  // add a new one
+  // edit the new one, checking the author and/or text changes
+  // edit it back
+  // delete
+})
