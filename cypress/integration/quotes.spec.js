@@ -36,7 +36,7 @@ describe('Inputs and submit button', () => {
     // grab the submit button
     // click the submit button
     // assert the inputs are back to blank and the button back to disabled
-    cy.get('#submitBtn').click()
+    cy.get('#cancelBtn').click()
 
     cy.get('input[name="text"]').should('have.value', '')    // assertion 1
     cy.get('input[name="author"]').should('have.value', '')  // assertion 2
