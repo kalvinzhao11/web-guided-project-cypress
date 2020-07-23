@@ -45,5 +45,12 @@ describe('Inputs and submit button', () => {
 })
 
 describe('Adding a new quote', () => {
-  // tests here
+  it('can navigate to the site', () => {
+    // repeat minus the check
+  })
+
+  it('can submit a quote', () => {
+    // filling out the form and submit it
+    // assert that a quote with the given text and author are in the DOM
+  })
 })
